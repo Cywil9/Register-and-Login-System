@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>{{the_title}}</title>
+    </head>
+    <body>
+		<ul>
+			{% if noLinks %}
+				<li><a href="/register">Register</a></li>
+				<li><a href="/">Login</a></li>
+				<li><a href="/resetpass">Reset Password</a></li>
+			{% endif %}
+			{% if showLinks %}
+				<li><a href ="/page1"> Page 1 </a></li>
+				<li><a href ="/page2"> Page 2 </a></li>
+				<li><a href ="/page3"> Page 3 </a></li>
+			{% endif %}
+			{% if currentUser %}
+				<a href ="/logout">Logout {{currentUser}}</a>
+			{% endif %}
+		</ul>
+		<h2>{{the_title}}</h2>
+		{% block the_body %}
+		{% endblock %}
+		{{the_message}}
+		{{the_error}}
+	</body>
+</html>
+

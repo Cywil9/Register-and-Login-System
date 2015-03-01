@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block the_body %}
+
+Please login:
+
+<form action='/processlogin' method='POST'>
+
+User-id: <input type='text' name='loginid'><br>
+Password: <input type='password' name='loginpasswd'><br>
+<input type='submit' value='Login'>
+</form>
+
+
+{% endblock %}
